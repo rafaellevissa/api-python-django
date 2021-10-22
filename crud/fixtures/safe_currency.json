@@ -1,0 +1,20 @@
+[
+  {
+    "model": "crud.safecurrency",
+    "pk": 1,
+    "fields": {
+      "safe_id": 1,
+      "currency_id": 1,
+      "user_id": 1
+    }
+  },
+  {
+    "model": "crud.safecurrency",
+    "pk": 2,
+    "fields": {
+      "safe_id": 2,
+      "currency_id": 1,
+      "user_id": 2
+    }
+  }
+]

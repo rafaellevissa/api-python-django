@@ -1,0 +1,10 @@
+[
+  {
+    "model": "crud.currency",
+    "pk": 1,
+    "fields": {
+      "name": "Real",
+      "initials": "R$"
+    }
+  }
+]

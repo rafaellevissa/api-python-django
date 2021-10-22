@@ -1,0 +1,16 @@
+[
+  {
+    "model": "crud.safe",
+    "pk": 1,
+    "fields": {
+      "ammount": 10
+    }
+  },
+  {
+    "model": "crud.safe",
+    "pk": 2,
+    "fields": {
+      "ammount": 10
+    }
+  }
+]

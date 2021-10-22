@@ -1,0 +1,26 @@
+[
+  {
+    "model": "crud.user",
+    "pk": 1,
+    "fields": {
+      "username": "jhon123",
+      "first_name": "Admin",
+      "last_name": "",
+      "is_active": true,
+      "last_login": "2019-03-10 11:16:09.184106+01:00",
+      "is_superuser": true
+    }
+  },
+  {
+    "model": "crud.user",
+    "pk": 2,
+    "fields": {
+      "username": "jhon1235",
+      "first_name": "John",
+      "last_name": "Snow",
+      "is_active": true,
+      "last_login": "2019-03-10 11:16:09.184106+01:00",
+      "is_superuser": true
+    }
+  }
+]

@@ -1,0 +1,17 @@
+Django>=3.0,<4.0
+psycopg2-binary>=2.8
+djangorestframework
+markdown
+django-filter
+pymysql
+djangorestframework-jwt
+mysqlclient
+django-rest-swagger
+drf_yasg
+asgiref
+cffi
+cryptography
+pycparser
+PyJWT
+pytz
+sqlparse

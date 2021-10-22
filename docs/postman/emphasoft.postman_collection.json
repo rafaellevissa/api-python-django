@@ -1,0 +1,646 @@
+{
+	"info": {
+		"_postman_id": "eeefca16-71d1-44bd-92e6-5318ea4b4f55",
+		"name": "app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTgzODY2NCwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.EOEsewbb_w57IVam06QoKsvn9syHXWb90_lZN76ecoY"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"pbkdf2_sha256$260000$F9NpDd18B83gzzgRcowpoQ$/DJQAwE9auKFQuyhJUX6P0xTGhBHzcQwcz334X8ohlM=\",\n    \"last_login\": null,\n    \"is_superuser\": true,\n    \"username\": \"joe\",\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"email\": \"joe@example.com\",\n    \"is_staff\": false,\n    \"is_active\": true,\n    \"date_joined\": \"2021-09-17T00:23:16.014234Z\",\n    \"groups\": [],\n    \"user_permissions\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTgzODcwNSwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.GEofvIsfeBdJhJXsYEY53Sv6GY3HqBmeKunywSE_BiA"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"teste11123\",\n    \"last_login\": null,\n    \"is_superuser\": true,\n    \"username\": \"joe11\",\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"email\": \"jo11e@example.com\",\n    \"is_staff\": false,\n    \"is_active\": true,\n    \"date_joined\": \"2021-09-17T00:23:16.014234Z\",\n    \"groups\": [],\n    \"user_permissions\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTgzODcwNSwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.GEofvIsfeBdJhJXsYEY53Sv6GY3HqBmeKunywSE_BiA"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "currency",
+			"item": [
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTgzNjkxMCwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.n7wogcCQNc-daLUTQ3g7b6wsk53fSaK9Qf8zdddbAtk"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/currency/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"currency",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Real\",\n    \"initials\": \"R$\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/currency/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"currency",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTgzODgyOCwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.aJz0E8DL0p6zdJ6CJFBJsjIaHH4gey0FzLCH8gS2a1g"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/currency/b6b015bf-ce52-4acf-bfe6-3eee7ea119a1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"currency",
+								"b6b015bf-ce52-4acf-bfe6-3eee7ea119a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTgzODgyOCwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.aJz0E8DL0p6zdJ6CJFBJsjIaHH4gey0FzLCH8gS2a1g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Real1\",\n    \"initials\": \"R$\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/currency/b6b015bf-ce52-4acf-bfe6-3eee7ea119a1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"currency",
+								"b6b015bf-ce52-4acf-bfe6-3eee7ea119a1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/currency/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"currency",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "safe_currency",
+			"item": [
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTgzNjkxMCwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.n7wogcCQNc-daLUTQ3g7b6wsk53fSaK9Qf8zdddbAtk"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/safecurrency/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"safecurrency",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"currency_id\": \"3af86e64-15db-4125-8d4d-4f16cfcf7b76\",\n    \"user_id\": 2,\n    \"ammount\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/safecurrency/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"safecurrency",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/safecurrency/6fff93bd-9e4a-4a7a-bd79-453785f47ffd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"safecurrency",
+								"6fff93bd-9e4a-4a7a-bd79-453785f47ffd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"safe_id\": \"a85192ed-5a63-4b1a-8ba8-57f75a1c5655\",\n    \"currency_id\": \"b6b015bf-ce52-4acf-bfe6-3eee7ea119a1\",\n    \"user_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/safecurrency/6fff93bd-9e4a-4a7a-bd79-453785f47ffd/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"safecurrency",
+								"6fff93bd-9e4a-4a7a-bd79-453785f47ffd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/safecurrency/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"safecurrency",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/transaction/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"created_at\": \"2010-05-06T00:00:00Z\",\n    \"safe_currency_source_id\": \"6fff93bd-9e4a-4a7a-bd79-453785f47ffd\",\n    \"safe_currency_received_id\": \"dc62973d-45ef-49ff-9e64-21db40f0b704\",\n    \"value\": 201\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transaction/ce2be1fc-589b-49a8-b427-d4431de9c8f8/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction",
+								"ce2be1fc-589b-49a8-b427-d4431de9c8f8",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/transaction/ef12deb3-3388-4366-bb35-11a05940032b1/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction",
+								"ef12deb3-3388-4366-bb35-11a05940032b1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"safe_currency_source_id\": \"9adf2f69-ec65-4fd6-967a-a7072f2cf846\",\n    \"safe_currency_received_id\": \"47f683cc-b09e-440f-866d-b1f548f9118c\",\n    \"value\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transaction/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTgzNjkxMCwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.n7wogcCQNc-daLUTQ3g7b6wsk53fSaK9Qf8zdddbAtk"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"rafaellevi\",\n    \"password\": \"futuro123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/​api-token-auth​/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"​api-token-auth​",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8000/api/v1"
+		},
+		{
+			"key": "token",
+			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImpvZSIsImV4cCI6MTYzMTg0NzY1NywiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20ifQ.ORmP_GZvOjNDYDBUpZl_ITQU-7nDswV8YWKE7YcH78c"
+		}
+	]
+}
